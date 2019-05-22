@@ -1,15 +1,14 @@
 from behave import *
-from twentyone import *
 
-@given('a dealer')
+@given('we have behave installed')
 def step_impl(context):
-    context.dealer = Dealer()
+    pass
 
-@when('the round starts')
+@when('we implement a test')
 def step_impl(context):
-    context.dealer.new_round()
+    assert True is not False
 
 
-@then('the dealer gives itself two cards')
+@then('behave will test it for us!')
 def step_impl(context):
-    assert (len(context.dealer.hand) == 2)
+    assert context.failed is False
